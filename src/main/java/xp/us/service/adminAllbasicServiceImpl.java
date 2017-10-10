@@ -382,12 +382,12 @@ public class adminAllbasicServiceImpl implements adminAllbasicService{
 	        // 发件人名称
 	        mail.setName(mailpojo.getEmail());
 	        // 登录账号,一般都是和邮箱名一样吧  
-	        mail.setUsername("13646738449@163.com");
+	        mail.setUsername("发件默认邮箱");
 	        // 发件人邮箱的登录密码  
-	        mail.setPassword("1012665655");
+	        mail.setPassword("邮箱密码");
 	        // 接收人  
-	        mail.setReceiver("1012665655@qq.com");
-	        mail.setSubject("信普官网邮件信息接收反馈");
+	        mail.setReceiver("接受方邮箱");
+	        mail.setSubject("信息接收反馈");
 	        //内容信息
 	        mail.setMessage("<h3 style=\"color:red;\">姓名:</h3>"+"<p style=\"font-size:20px;\">"+mailpojo.getUsername()+"</p>"+"<h3 style=\"color:red;\">手机联系电话:</h3>"+"<p style=\"font-size:20px;\">"+mailpojo.getPhone()+"</p>"+"<h3 style=\"color:red;\">具体的信息或反馈:</h3>"+"<p style=\"font-size:20px;\">"+mailpojo.getInformation()+"</p>");
 	        

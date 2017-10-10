@@ -1,0 +1,38 @@
+        $(function() {
+            var i = 0;
+            var pic_index = $(".num li").length;
+            var time;
+            
+             time = setInterval(function() {
+                    $(".pic li").eq(i).slideDown("slow").siblings().slideUp("slow");
+                    $(".num li").eq(i).css("background", "red").siblings().css("background", "");
+                    i++;
+                    if (i == pic_index) {
+                        i = 0;
+                    }
+                }, 2000);    
+            
+            $(".num li").mouseleave(function() {
+                time = setInterval(function() {
+                    $(".pic li").eq(i).slideDown("slow").siblings().slideUp("slow");
+                    $(".num li").eq(i).css("background", "red").siblings().css("background", "");
+                    i++;
+                    if (i == pic_index) {
+                        i = 0;
+                    }
+                }, 2000);              
+                
+            });
+            
+            $(".num li").mouseover(function() {
+                var index = $(this).index();
+                $(".pic li").eq(index).slideDown("slow").siblings().slideUp("slow");
+                 $(".num li").eq(index).css("background", "red").siblings().css("background", "");
+                clearInterval(time);
+            });
+        
+            $('#myCarousel').carousel({
+            	interval: 4000
+            });
+            
+        });

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xp.us.mapper.WorkTextMapper" >
+  <resultMap id="BaseResultMap" type="xp.us.pojo.WorkText" >
+    <id column="textid" property="textid" jdbcType="INTEGER" />
+    <result column="workid" property="workid" jdbcType="INTEGER" />
+    <result column="textname" property="textname" jdbcType="VARCHAR" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="diec" property="diec" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    textid, workid, textname, image, diec
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="xp.us.pojo.WorkTextExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from work_text
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from work_text
+    where textid = #{textid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from work_text
+    where textid = #{textid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="xp.us.pojo.WorkTextExample" >
+    delete from work_text
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="xp.us.pojo.WorkText" >
+    insert into work_text (textid, workid, textname, 
+      image, diec)
+    values (#{textid,jdbcType=INTEGER}, #{workid,jdbcType=INTEGER}, #{textname,jdbcType=VARCHAR}, 
+      #{image,jdbcType=VARCHAR}, #{diec,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="xp.us.pojo.WorkText" >
+    insert into work_text
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="textid != null" >
+        textid,
+      </if>
+      <if test="workid != null" >
+        workid,
+      </if>
+      <if test="textname != null" >
+        textname,
+      </if>
+      <if test="image != null" >
+        image,
+      </if>
+      <if test="diec != null" >
+        diec,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="textid != null" >
+        #{textid,jdbcType=INTEGER},
+      </if>
+      <if test="workid != null" >
+        #{workid,jdbcType=INTEGER},
+      </if>
+      <if test="textname != null" >
+        #{textname,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null" >
+        #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="diec != null" >
+        #{diec,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="xp.us.pojo.WorkTextExample" resultType="java.lang.Integer" >
+    select count(*) from work_text
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update work_text
+    <set >
+      <if test="record.textid != null" >
+        textid = #{record.textid,jdbcType=INTEGER},
+      </if>
+      <if test="record.workid != null" >
+        workid = #{record.workid,jdbcType=INTEGER},
+      </if>
+      <if test="record.textname != null" >
+        textname = #{record.textname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.image != null" >
+        image = #{record.image,jdbcType=VARCHAR},
+      </if>
+      <if test="record.diec != null" >
+        diec = #{record.diec,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update work_text
+    set textid = #{record.textid,jdbcType=INTEGER},
+      workid = #{record.workid,jdbcType=INTEGER},
+      textname = #{record.textname,jdbcType=VARCHAR},
+      image = #{record.image,jdbcType=VARCHAR},
+      diec = #{record.diec,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="xp.us.pojo.WorkText" >
+    update work_text
+    <set >
+      <if test="workid != null" >
+        workid = #{workid,jdbcType=INTEGER},
+      </if>
+      <if test="textname != null" >
+        textname = #{textname,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null" >
+        image = #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="diec != null" >
+        diec = #{diec,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where textid = #{textid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="xp.us.pojo.WorkText" >
+    update work_text
+    set workid = #{workid,jdbcType=INTEGER},
+      textname = #{textname,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      diec = #{diec,jdbcType=VARCHAR}
+    where textid = #{textid,jdbcType=INTEGER}
+  </update>
+  
+    <select id="getSum" resultType="java.lang.Integer" >
+	select count(*) from work_text
+	</select>
+</mapper>

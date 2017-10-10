@@ -1,0 +1,14 @@
+.pop2{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+.pop2 .popMain2{ width: 400px; min-height: 200px; background: #fff; position: absolute; left: 55%; top: 30%; margin-left: -300px;}
+.popMiddle2 p{ text-align: center; font-size:24px; color: #666;margin-top:60px;}
+.pop2 .popBottom2{ position: absolute; bottom: 0; left: 0; display: flex; width: 100%; height: 60px; text-align: center; background: #488ACC;}
+.pop2 .popBottom2 span{ flex: 1; text-align: center; font-size: 24px; color: #fff; line-height: 60px; cursor: pointer;}
+.pop2 .popBottom2 span:first-of-type{ border-right: 1px solid #fff;}	

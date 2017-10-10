@@ -1,0 +1,162 @@
+#sec_center{
+	width:1300px;
+	height:700px;
+	position:relative;
+	margin:0 auto;
+}
+
+#about_js{
+	width:100%;
+	height:800px;
+}
+#sec2_left{
+    width:600px;
+	height:650px;
+	margin-top:50px;
+	position:absolute;
+}
+
+#sec2_right{
+    width:100%;
+	height:500px;
+	margin-top:100px;
+	position:absolute;
+	background-color:#5ca0c5;	
+}
+#screen2{
+	height:100%;
+	position:absolute;
+	left:650px;
+	top:0px;
+	width:620px;
+}
+
+#sub2-title{
+	margin-top:150px; 
+	font-size:26px;
+}
+
+#sub2-details{
+	width:510px;
+	line-height:2em;
+	font-size:24px;
+	margin-left:80px;
+	margin-top:40px;
+}
+
+#js_text{
+	border-left:#E0E0E0 1px solid;
+	border-right:#E0E0E0 1px solid;
+	margin-top:30px;
+	margin-left:45%;
+	width:150px;
+	height:50px;
+}
+#pic_js{
+	width:100%;
+	height:90%;
+	position:relative;
+}
+.mask{
+    width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.4);
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:9998;
+	display:none;
+}
+.begin-voide{
+    width:70%;
+	position:fixed;
+	top:8%;
+	left:15%;
+	z-index:9999;
+	background:#fff;
+	border-radius:5px;
+	display:none;
+	
+}
+.cancel{
+    width:60px;
+	height:60px;
+	position:fixed;
+	top:8%;
+	right:2%;
+	z-index:9999;
+	background:url(../images/cancel.png);
+	display:none;
+}
+
+#top_pic{
+	width:100%;
+	height:500px;
+	background:url(../images/about2.png) no-repeat;
+	margin-top:120px;
+}
+
+#about_js{
+	width:100%;
+	height:800px;
+}
+#js_text{
+	border-left:#E0E0E0 3px solid;
+	border-right:#E0E0E0 3px solid;
+	margin-top:50px;
+	width:200px;
+	height:50px;
+}
+#pic_js{
+	width:100%;
+	height:90%;
+	border:1px solid red;
+	position:relative;
+}
+
+#about_js_text{
+	width:100%;
+	height:auto;
+	position:absolute;
+	margin-top:20px;
+}
+#about_video{
+	width:100%;
+	height:650px;
+	margin-top:80px;
+	background:url(../images/N1.png);		
+	text-align:center;
+	color:#fff;
+	background-size:cover;
+}
+
+#about_team{
+	width:100%;
+	height:400px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+#about_map{
+	width:100%;
+	height:350px;
+	margin-top:20px;
+	
+}
+
+ #flags{
+		  width:100px;
+		  height:100px;
+		  margin:5px;
+		  background:url(../images/logo-top-.png) no-repeat;
+		  float:left;
+        }
+
+
+
+
+
+
+
+
+

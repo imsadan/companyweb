@@ -1,0 +1,70 @@
+
+/*
+  字体设置index
+*/
+#ft_tp_36{
+	font:36px Microsoft YaHei;
+}
+
+#ft_tp_28{
+	font:28px Microsoft YaHei;
+}
+
+.ft_tp_28{
+	font:28px Microsoft YaHei;
+}
+
+#ft_tp_24{
+	font:24px Microsoft YaHei;
+}
+
+#ft_tp_20{
+	font:20px Microsoft YaHei;
+}
+
+.ft_pf_36{
+	font:36px Microsoft YaHei;
+}
+
+#wr_20{
+	font:20px Microsoft YaHei;
+}
+
+#wr_36{
+	font:36px Microsoft YaHei;
+}
+
+#wr_24{
+	font:24px Microsoft YaHei;
+}
+
+#wr_m_24{
+	font:24px Microsoft YaHei;
+}
+
+#wr_40{
+	font:40px Microsoft YaHei;
+	color:#fff;
+}
+
+#foot_wr{
+	font:18px Microsoft YaHei;
+	line-height:2em;
+}
+
+#foot_wr2{
+	font:18px Microsoft YaHei;
+}
+
+
+#ft_about_60{
+	font:60px Microsoft YaHei;
+	color:#fff;
+}
+
+
+#work_pf_20{
+	font:36px Microsoft YaHei;
+	color:#C0C0C0;
+}
+

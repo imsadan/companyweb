@@ -1,0 +1,348 @@
+<%@ page language="java" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!doctype html>
+<html>
+<title>信普科技</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script type="text/javascript" src="js/jquery-1.6.4.js"></script>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/index_pic.js"></script>
+<script type="text/javascript" src="js/index_tab.js"></script>
+<style type="text/css">
+/* 返回顶部跟公众号*/
+.asid_share{position:fixed;width:60px;bottom:40%;left:10px;z-index:890;}
+*html #asid_share{position:absolute;top:expression(documentElement.scrollTop + "px");margin:300px 0 0 0;}
+.asid_share .asid_share_box{width:100%;margin-bottom:3px;background:#d9d9d9;text-align:center;}
+.asid_share .asid_share_box a{display:block;height:60px;padding-top:15px;}
+.asid_share .asid_share_box a:hover{background:#e12500;text-decoration:none;}
+.asid_share .asid_share_box a:hover .asid_title,.asid_share .asid_share_box .asid_title{color:#fff;font-size:12px;display:block;padding-left:6px;line-height:18px;width:30px;margin-top:-2px;}
+.asid_share .red_bag{background:#e12500;text-decoration:none;}
+.asid_share .asid_sha_layer{border:1px solid #ccc;background:#fff;position:absolute;left:47px;bottom:-44px;}
+.sweep_img{padding:5px;}
+.asid_share_triangle{width:12px;height:40px;position:absolute;right:45px;bottom:-12px;z-index:100;}
+.border_sj,.con_sj{display:block;width:18px;height:28px;font-size:18px;overflow:hidden;font-family: SimSun;}
+.border_sj{color:#ccc;font-style:normal;}
+.con_sj{color:white;margin:-14px -2px 0 0;margin:-28px 0 0 -2px;}
+</style>
+</head>
+<body>
+<div id="box1">
+	<div class="mains">
+    <div class="flags">     	   
+	</div>
+	<div class="top_text">
+	   <p style="text-align:center;">
+	   <a href="/" style="text-decoration:none">HOME</a>&nbsp&nbsp&nbsp&nbsp
+	   <a href="" style="text-decoration:none">服务</a>&nbsp&nbsp&nbsp&nbsp
+	   <a href="/about" style="text-decoration:none">关于我们</a>&nbsp&nbsp&nbsp&nbsp
+	   <a href="/works" style="text-decoration:none">案例展示</a>&nbsp&nbsp&nbsp&nbsp
+	   <a href="/reads" style="text-decoration:none">新闻中心</a></p>
+	</div>
+  </div>
+  <div id="top_center" style="width:100%;height:500px;margin-top:100px;" >
+      <div id="pictures" style="width:100%;height:100%;float:left;margin-left:20%;">
+		<div id="myCarousel" class="carousel slide">
+		    <!-- 轮播（Carousel）指标 -->
+		    <ol class="carousel-indicators">
+		        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		        <li data-target="#myCarousel" data-slide-to="1"></li>
+		        <li data-target="#myCarousel" data-slide-to="2"></li>
+		    </ol>   
+		    <!-- 轮播（Carousel）项目 -->
+		    <div class="carousel-inner">
+		      <c:forEach items="${adv}" var="adv" begin="0" end="0">
+		        <div class="item active" data-id="1" data-title="图片1">
+		            <img src="${adv.image}" alt="First slide" id="image_c">
+		        </div>
+		      </c:forEach> 
+		      <c:forEach items="${adv}" var="adv" begin="1" end="2"> 
+		      <div class="item" data-id="{2,3}" data-title="遍历图片2,3">
+		            <img src="${adv.image}" alt="Second slide" id="image_c">
+		        </div>
+		      </c:forEach>  
+		    </div>
+		</div>	
+      </div> 
+  </div>
+    <div id="center_text" style="width:500px;height:80px;top:40px;left:50px;
+	        margin-top:200px;margin-left:100px;position:absolute;">
+	   <h2>Now let's top it in 2017</h2><br/>
+	   <p>了解，让彼此更信任</p>
+	</div>
+	
+		 
+<!--我们的服务-->
+<div class="service" ><br>
+    <h3><p align="center">What We Do</p>
+        <p align="center"><a href="" style="text-decoration:none;">我们的服务</a></p>
+    </h3> 
+    <div style="width:100%;height:1px; background:#E0E0E0;"></div>
+        <div style="width:10%;height:5px; background:blue; margin-left:45%;">
+        </div>  
+    <h4><p align="center">专注于各行业基于物联网的“智慧化”改造和移动设备APP的研究开发，<br>形成了针对政府，企业等不同行业，不同规模，不同产品和针对性解决方案，<br>是一加具有强大技术力量的信息化技术提供商。</p></h4>
+	<div id="text_01">
+        <img src="images/1.png" width="100" height="100" style="margin-left:35%;margin-top:100px;">
+		<h4><p align="center">网站设计，手机移动端开发</p></h4><br>
+        <h5><p align="center">高端品牌网站设计，<br><br>响应式网站设计，<br><br>信息平台门户网站，<br><br>移动手机网站建设，<br><br>定制开发各类APP，<br><br>微信小程序和<br><br>公众号开发。</p></h5>
+    </div> 
+    <div id="text_02">
+         <img src="images/2.png" width="100" height="100" style="margin-left:35%;margin-top:100px;">  
+          <h4><p align="center">智慧工厂</p></h4><br>
+       <h5><p align="center">利用物联网技术和监控技<br><br>术加强信息管理，服务；<br><br>提高生产过程可控性，减<br><br>少生产线人工干预，以及<br><br>合理计划排程。</p></h5>
+     </div>  
+     <div id="text_03">
+         <img src="images/3.png" width="100" height="100" style="margin-left:35%;margin-top:100px;">  
+          <h4><p align="center">智慧教育</p></h4><br>
+       <h5><p align="center">打造学校，学生，家长，<br><br>三位一体基于物联网的智<br><br>慧化校园系统。</p></h5>
+     </div> 
+     <div id="text_04">
+          <img src="images/4.png" width="100" height="100" style="margin-left:35%;margin-top:100px;">  
+          <h4><p align="center">智能家居数据服务</p></h4><br>
+       <h5><p align="center">打造智能家居数据平台，<br><br>提供智能产品数据统计以<br><br>及分析一体化解决方案。</p></h5>
+     </div> 
+     <div id="text_05">
+        <img src="images/5.png" width="100" height="100" style="margin-left:35%;margin-top:100px;">  
+          <h4><p align="center">ERP，MES系统定制开发</p></h4><br>
+       <h5><p align="center">为企业提供量身定制的<br><br>MES系统和ERP系统，<br><br>解决企业实际运营中的一<br><br>些情况，提高经营效率，<br><br>扩大产能。</p></h5> 
+     </div> 
+</div>
+</div>
+<br><br><br>
+<div id="box2">
+    <div id="sec_all">
+	  <div id="sec_right">
+	    <div id="right_title">
+		  <br>
+		  <p>嘉兴信普信息科技有限公司</p>
+		  <br>
+		  <p>
+		    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp专注于各行业基于物联网“智慧化”改造和移动<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp设备APP的研究开发，形成了针对政府，企业等<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp不同行业，不同规模，不同应用的产品和针对性<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp解决方案，是一家具有强大技术力量的信息化技<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp术提供商。
+		  </p>
+		  <div id="more"><p align="center"><a href="/about"style="text-decoration:none">了解更多</a></p></div>
+		</div>
+	  </div>
+	  <div id="sec_left">
+	    <img src="../images/about.png" style="width:100%;height:100%;" id="about"/>
+	  </div>
+	  <div id="sec_about">
+	    <img src="../images/about_text.png" style="width:100%;height:100%;" id="about_text"/>
+	  </div>
+	 <img src="../images/N1.png" style="width:100%;height:100%;" id="n1"/>
+	</div>
+	<!--下半部分-->
+	<div id="sec_last">
+	  <div id="last_01">
+		   <div id="last_pic01">
+		     <p id="text">PROJECT CASE</p><br>
+			 <P id="text">项目案例</P><br>
+			 <div style="width:130px;height:5px; background:blue; margin-left:20%;"></div>
+			 <br><br>
+			 <p id="text"><a href="/works" style="text-decoration:none">更多案例</a></p>
+			 <p></p>
+		   </div>
+		   <img src="images/back.png" style="width:100%;height:100%;"/>
+		   <div id="last_pic02">
+		     <img src="images/app.png" style="width:100%;height:100%;"/>
+		   </div>
+        <div id="last_pic03">
+		     <img src="images/ld.png" style="width:100%;height:100%;"/>
+		</div>
+           <div id="last_pic04">
+		    <img src="images/fq.png" style="width:100%;height:100%;"/>
+		   </div>
+	  </div>
+	  
+	</div>
+</div>
+<div id="box3"> 
+  <div id="b3_pic"></div>
+     <div id="b3_text">
+       <br>
+       <h3><p align="center">OUR CUSTOMERS</p></h3><br>
+       <p align="center">我们追求完美，更关注客户的满意程度</p><br>
+       <div style="width:100%;height:1px; background:#E0E0E0;"></div>
+        <div style="width:10%;height:5px; background:blue; margin-left:45%;"></div>
+     </div> 
+     <br><br><br>
+     <div id="b3_grob">
+     <div style="width:100%;height:350px;">
+        <div style="width:100px;height:150px;position:absolute;margin-top:5%;">
+			<ul class="num">
+				<li class="on">&nbsp;</li>
+				<li>&nbsp;</li>
+				<li>&nbsp;</li>
+				<li>&nbsp;</li>
+			</ul>
+		</div>
+	    <div id="scrollPics" style="width:80%;height:350px;margin-left:20%;">
+	        <ul class="pic">
+              
+	            <li>
+	            <c:forEach items="${cust}" var="cust" begin="0" end="2">
+	             <img src="${cust.image}" id="pic_size"/>
+  	             &nbsp;&nbsp;&nbsp;&nbsp;    
+  	             </c:forEach>           	             
+	            </li>                        
+	            <li>
+	            <c:forEach items="${cust}" var="cust" begin="3" end="5">
+	             <img src="${cust.image}" id="pic_size"/>
+  	             &nbsp;&nbsp;&nbsp;&nbsp;
+  	             </c:forEach>
+	            </li>   
+	            <li>
+	            <c:forEach items="${cust}" var="cust" begin="6" end="8">
+	             <img src="${cust.image}" id="pic_size"/>
+  	             &nbsp;&nbsp;&nbsp;&nbsp;
+  	            </c:forEach>
+	            </li>
+	            <li>
+	            <c:forEach items="${cust}" var="cust" begin="9" end="11">
+	             <img src="${cust.image}" id="pic_size"/>
+  	             &nbsp;&nbsp;&nbsp;&nbsp;
+  	            </c:forEach>
+	            </li>   
+	        </ul>
+	        
+	    </div>
+	</div>
+    </div>
+    <div id="b3_footer">
+       <br>
+       <h3><p align="center">NEWS SENTER</p></h3><br>
+       <p align="center">新闻中心</p><br>
+       <div style="width:100%;height:1px; background:#E0E0E0;"></div>
+       <div style="width:10%;height:5px; background:blue; margin-left:45%;"></div>
+    </div> 
+</div> 
+<div id="box4">
+	   <div id="b4_m">                		  
+	      <div id="b4_pic">
+		     <div id="b4_01">
+			    <img src="images/N3.png" style="width:100%;height:100%;"/>
+			 </div>
+			 <div id="b4_02">
+			    <img src="images/N2.png" style="width:100%;height:100%;"/>
+			 </div>
+			 <div id="b4_03">
+                <div id="b4_text">
+                   <p align="center"><h3>我们被信赖，只因为我们更专业</h3></p>
+                   <p align="center"><h3>We are srust,because we are more professional.</h3></p>
+               <div id="button_pic2">
+                 <p align="center"><a href="/reads">更多新闻</a></p>
+               </div> 
+                </div>
+				<img src="images/N1.png" style="width:100%;height:100%;"/>
+             </div>
+			 <div id="b4_04">
+			   <br>
+               <p align="center">智慧能源+新型建材</p>
+               <p align="center">智能家居走入寻常百姓家</p>
+               <p align="center">内部环境舒适宜居，自带储能系统</p>
+               <div id="button_pic2">
+                 <p align="center"><a href="/reads">进入阅读</a></p>
+               </div>  
+             </div>
+		  </div>
+		  <img src="images/map.png" style="width:100%;height:100%;"/>
+	   </div>
+       <br><br><br>
+       <div style="width:100%;height:1px; background:#E0E0E0;"></div>
+       <div style="width:130px;height:30px;margin-left:45%; margin-top:-15px;">
+         <div id="top"><img src="images/TOP.png" style="width:100%; height:100%"></div>
+       </div>
+	   <!--尾-->
+	   <div id="footer">
+	      <div id="footer_flag"></div>
+		  <div id="footer_addr">
+		     <br>
+		    <p align="center">地址：<br>
+			   嘉兴余北大街渔谣路
+			</p>
+			<p align="center">电话：<br>
+			  0573-83018563
+			</p>
+			<p align="center">邮箱：<br>
+			   25634893@qq.com
+			</p>
+		  </div>
+		  <div id="footer_home">
+		    <br>
+			<p align="center">关于我们</p>
+			<p align="center"><a href="" style="text-decoration:none;">公司简介</a></p>
+			<p align="center"><a href="" style="text-decoration:none;">团队介绍</a></p>
+		  </div>
+		  <div id="footer_name">
+		  <br>
+		     <h4><p align="center">加入我们</p></h4>
+			 <p align="center">英才招聘</p><br>
+			 <p align="center">姓名 NAME
+			    <div style="width:80%;height:1px; background:#E0E0E0;"></div>
+			 </p>
+			 <P align="center">邮箱 E-MAIL
+			    <div style="width:80%;height:1px; background:#E0E0E0;"></div>
+			 </P>
+			 <p align="center">电话 TEL
+			    <div style="width:80%;height:1px; background:#E0E0E0;"></div>
+			 </p>
+			 <P align="center">信息 INFORMATION
+			    <div style="width:80%;height:1px; background:#E0E0E0;"></div>
+			 </P>
+			 <div style="float:right;" id="button_pic">
+			    <p align="center"><a href="">发送 </a></p>
+			 </div>
+		  </div>
+	   </div>
+</div>
+<!-- asid start -->
+<div class="asid_share" id="asid_share">
+
+	<div class="asid_share_box relative">
+		<a href="#"><img alt="扫二微码" title="扫二微码" class="adid_icon" src="../images/icon_sweep.png"></a>
+	<div class="asid_share_triangle" style="display:none;">
+			<em class="border_sj">&#9670;</em>
+	    <span class="con_sj">&#9670;</span>
+    </div>
+	<div class="asid_sha_layer" style="width:250px;display:none;">
+			<p class="sweep_img"><img src="images/weixin.jpg" width="220"></p>
+			<p class="pb6"><b>欢迎访问公众号</b></p>
+	</div>
+	</div>
+	<div class="asid_share_box relative" style="display:none;">
+		<a href="#"><img alt="返回顶部" title="返回顶部" class="adid_icon" src="../images/icon_back.png"></a>
+	</div>
+</div>
+<!-- asid end -->
+<script type="text/javascript" src="../js/jquery-1.6.4.js"></script>
+<script type="text/javascript" src="../js/jQuery.hhShare.min.js"></script>
+<script>
+$(function(){
+	$("#top").click(function(){
+		  $("html,body").animate({scrollTop:0}, 500);
+		});
+	
+	//图片滚动特效
+	$('#asid_share').hhShare({
+		cenBox     : 'asid_share_box',  //里边的小层
+		icon       : 'adid_icon',
+		addClass   : 'red_bag',
+		titleClass : 'asid_title',
+		triangle   : 'asid_share_triangle', //鼠标划过显示图层，边上的小三角
+		showBox    : 'asid_sha_layer' //鼠标划过显示图层
+	});
+	
+});
+</script>
+
+
+</body>
+
+</html>

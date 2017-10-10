@@ -1,0 +1,114 @@
+/*
+  苹方
+*/
+@font-face {  
+ font-family: PingFang Bold;  
+ src: url("../font/PingFang Bold.ttf") 
+} 
+
+@font-face {  
+ font-family: PingFang Light;  
+ src: url("../font/PingFang Light.ttf") 
+} 
+@font-face {  
+ font-family: PingFang ExtraLight;  
+ src: url("../font/PingFang ExtraLight.ttf") 
+} 
+@font-face {  
+ font-family: PingFang Heavy;  
+ src: url("../font/PingFang Heavy.ttf") 
+} 
+@font-face {  
+ font-family: PingFang Medium;  
+ src: url("../font/PingFang Medium.ttf") 
+} 
+@font-face {  
+ font-family: PingFang Regular;  
+ src: url("../font/PingFang Regular.ttf") 
+} 
+/*
+  微软
+*/
+@font-face {  
+ font-family: msyh;  
+ src: url("../font/msyh.ttc") 
+} 
+@font-face {  
+ font-family: msyhbd;  
+ src: url("../font/msyhbd.ttc") 
+} 
+@font-face {  
+ font-family: msyhl;  
+ src: url("../font/msyhl.ttc") 
+} 
+
+/*
+  字体设置index
+*/
+#ft_tp_36{
+	font:36px PingFang Bold;
+}
+
+#ft_tp_28{
+	font:28px PingFang Regular;
+}
+
+.ft_tp_28{
+	font:28px PingFang Regular;
+}
+
+#ft_tp_24{
+	font:24px PingFang Medium;
+}
+
+#ft_tp_20{
+	font:20px PingFang Medium;
+}
+
+.ft_pf_36{
+	font:36px PingFang Medium;
+}
+
+#wr_20{
+	font:20px msyhl;
+}
+
+#wr_36{
+	font:36px msyh;
+}
+
+#wr_24{
+	font:24px PingFang Regular;
+}
+
+#wr_m_24{
+	font:24px PingFang Medium;
+}
+
+#wr_40{
+	font:40px PingFang Regular;
+	color:#fff;
+}
+
+#foot_wr{
+	font:18px PingFang Regular;
+	line-height:2em;
+}
+
+#foot_wr2{
+	font:18px PingFang Regular;
+}
+
+
+
+#ft_about_60{
+	font:60px PingFang Regular;
+	color:#fff;
+}
+
+
+#work_pf_20{
+	font:36px PingFang Regular;
+	color:#C0C0C0;
+}
+

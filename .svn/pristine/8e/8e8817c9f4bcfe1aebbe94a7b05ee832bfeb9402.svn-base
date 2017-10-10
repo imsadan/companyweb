@@ -1,0 +1,215 @@
+<%@ page language="java" pageEncoding="utf-8"%>
+<!doctype html>
+<html>
+<title>信普科技</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../css/about.css"/>
+<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+<script type="text/javascript" src="../js/jquery-1.6.4.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Bkouc68KR1O3UaRtXKo5lRC9Uz4GUPP9"></script>
+<script type="text/javascript" src="../js/index_pic.js"></script>
+<style type="text/css">
+		#allmap{width:100%;height:350px;}
+		p{margin-left:5px; font-size:14px;}
+		.anchorBL{ 
+          display:none; 
+        } 
+</style>
+<body> 
+<div class="mains" style="position:relative;">
+    <div class="flags">     	   
+	</div>
+	<div class="top_text">
+	   <p style="text-align:center;">
+	   <a href="/" style="text-decoration:none">HOME</a>&nbsp&nbsp&nbsp&nbsp
+	   <a href="" style="text-decoration:none">服务</a>&nbsp&nbsp&nbsp&nbsp
+	   <a href="/about" style="text-decoration:none">关于我们</a>&nbsp&nbsp&nbsp&nbsp
+	   <a href="/works" style="text-decoration:none">案例展示</a>&nbsp&nbsp&nbsp&nbsp
+	   <a href="/reads" style="text-decoration:none">新闻中心</a></p>
+	</div>
+</div>
+<div id="top_pic">
+		<div>
+		<br><br><br><br>
+		      <h1><p align="center">ABOUT US<br></p></h1>
+	          <p align="center"> 关于我们</p>
+		</div>	
+</div>
+<div id="about_js">
+   <div id="js_text">
+     <p align="center">企业介绍</p>
+   </div>
+   <div id="pic_js">
+     	<div id="sec_right"  style="margin-top:5%;height:60%;">
+	    <div id="right_title">
+		  <br>
+		  <p>嘉兴信普信息科技有限公司</p>
+		  <br>
+		  <p>
+		    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp专注于各行业基于物联网“智慧化”改造和移动<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp设备APP的研究开发，形成了针对政府，企业等<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp不同行业，不同规模，不同应用的产品和针对性<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp解决方案，是一家具有强大技术力量的信息化技<br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp术提供商。
+		  </p>
+		</div>
+	  </div>
+	  <div id="sec_left">
+	    <img src="images/about.png" style="width:100%;height:100%;" id="about"/>
+	  </div>
+   </div>
+</div>
+<div id="about_js_text">
+    <div style="width:100%;height:1px; background:#E0E0E0;"></div>
+	<div>
+	<br/>
+	   <h1><p align="center">理念与初衷</p></h1><br/>
+	   <p align="center">“创新，将新技术转化为生产力”是信普信息的核心竞争力。<br/><br/>
+	    凭借对物联网和互联网行业的深刻理解，<br/><br/>
+		信普信息将物联网技术与互联网应用相结合，将领先业界的产品理念和丰富的产品开发经验相结合，<br/><br/>
+		为用户提供简单，方便，安全，实用的协同应用软件产品和解决方案<br/><br/>
+		帮助客户实现低成本，低风险，快起步，高效率的信息化目标。<p>
+	</div>
+	<div id="about_video">
+	  <!--          点击播放视屏          -->
+	 <div >
+	    <div> 
+		    <br><br><br>
+     		<h3 style="line-height:2;margin-top:5%;">一切从现在开始<br>信普科技未来的方向<h3>
+			  <img src="images/begin2.png" id="begin" style="width:60px;">
+		</div>
+    </div>
+	 <!--          背景遮罩层         --> 
+	<div class="mask"></div>
+	 <!--          视频播放          -->
+	<div class="begin-voide">
+	       <h4 style="margin-left:15px;">物联网开放平台 OneNET</h4>
+		   <video  id="play"   style="width:100%;" controls="controls"   loop="loop"   src="https://upfiles.heclouds.com/other_files/OneNet++.mp4"/>
+	</div>
+	<div class="cancel"></div>
+	</div>
+	<div>
+	  <br/>
+	  <h1><p align="center">我们的团队</p></h1><br/>
+	  <p align="center">拥有由优秀管理人员组成的管理团队和由年轻活力的IT工程师组成的技术团队，<br><br/>
+		帮助客户实现低成本，低风险，快起步，高效率的信息化目标。<br><br>
+	    成员中有海外工作经历的，有资深急速研发的，有专业客服运维的。<br><br/>
+		对生活，对工作我们充满热情，对人，对事我们是有“态度的”。<br><br/>
+		我们在产品开发，推广和维护方面默契合作，<br><br/>
+		深刻理解“以客户为中心”的含义，将“服务”贯穿于公司运作和管理的每一个细节<br><br/>
+		，赢得客户广泛的信任和支持。<p>
+	  </p>
+    </div>
+	<div id="about_team">
+	  
+	</div>
+	<div id="about_map">
+	   <div id="allmap"></div>
+	</div>
+	<br><br><br/>
+<div style="width:100%;height:1px; background:#E0E0E0;"></div>
+    <div style="width:130px;height:20px;margin-left:45%; margin-top:-15px;">
+          <div id="top"><img src="images/TOP.png" style="width:100%; height:100%"></div>
+    </div>
+		   <!--尾-->
+	   <div id="footer">
+	      <div id="footer_flag"></div>
+		  <div id="footer_addr">
+		     <br>
+		    <p align="center">地址：<br>
+			   嘉兴余北大街渔谣路
+			</p>
+			<p align="center">电话：<br>
+			  0573-83018563
+			</p>
+			<p align="center">邮箱：<br>
+			   25634893@qq.com
+			</p>
+		  </div>
+		  <div id="footer_home">
+		    <br>
+			<p align="center">关于我们</p>
+			<p align="center"><a href="" style="text-decoration:none;">公司简介</a></p>
+			<p align="center"><a href="" style="text-decoration:none;">团队介绍</a></p>
+		  </div>
+		  <div id="footer_name">
+		  <br>
+		     <h4><p align="center">加入我们</p></h4>
+			 <p align="center">英才招聘</p><br>
+			 <p align="center">姓名 NAME
+			    <div style="width:80%;height:1px; background:#E0E0E0;"></div>
+			 </p>
+			 <P align="center">邮箱 E-MAIL
+			    <div style="width:80%;height:1px; background:#E0E0E0;"></div>
+			 </P>
+			 <p align="center">电话 TEL
+			    <div style="width:80%;height:1px; background:#E0E0E0;"></div>
+			 </p>
+			 <P align="center">信息 INFORMATION
+			    <div style="width:80%;height:1px; background:#E0E0E0;"></div>
+			 </P>
+			 <div style="float:right;">
+			    <input type="button" value="发送"/>
+			 </div>
+		  </div>
+	   </div>
+</div>
+<script>
+$(function(){
+	$("#top").click(function(){
+		  $("html,body").animate({scrollTop:0}, 500);
+		});
+		
+	  $("#begin").click(function(){
+			    $(".mask").show();
+				$(".begin-voide").show();
+			    $(".cancel").show();
+				 document.getElementById("play").play();
+			  });
+			  
+			  $(".cancel").click(function(){
+			     $(".mask").hide();
+				$(".begin-voide").hide();
+			    $(".cancel").hide();
+				 document.getElementById("play").pause();
+			  
+			  });	
+	
+})
+</script>	
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	map.centerAndZoom(new BMap.Point(120.822815,30.67598),15);
+	map.enableScrollWheelZoom();   //启用滚轮放大缩小
+	map.enableContinuousZoom(); 
+    $.ajax({
+        async:true, 
+        type:'post',
+        url:'/maps',
+        success:function(data){
+           var s=eval(data);
+           for(var i=0;i<s.length;i++){
+                var point=new BMap.Point(s[i].x,s[i].y);
+              var marker = new BMap.Marker(point); 
+              map.addOverlay(marker); 
+              	var opts = {
+				  width : 100,     // 信息窗口宽度
+				  height: 80,     // 信息窗口高度
+				  title : s[i].name , // 信息窗口标题
+				  enableMessage:true,//设置允许信息窗发送短息
+				}
+				var infoWindow = new BMap.InfoWindow(s[i].address, opts);  // 创建信息窗口对象 
+				marker.addEventListener("click", function(){          
+					map.openInfoWindow(infoWindow,point); //开启信息窗口
+				});
+           }
+           
+           
+        }
+    
+    });
+</script>

@@ -1,0 +1,27 @@
+package xp.us.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import xp.us.commons.JsonUtils;
+import xp.us.mapper.MapMapper;
+import xp.us.pojo.Map;
+import xp.us.pojo.MapExample;
+
+@Service
+public class mapServiceImpl implements mapService{
+    
+	@Autowired
+	private MapMapper mapMapper;
+	
+	@Override
+	public String getMapInfo() {
+		MapExample example=new MapExample();
+		List<Map> list=mapMapper.selectByExample(example);
+		String s=JsonUtils.objectToJson(list);
+		return s;
+	}
+    
+}

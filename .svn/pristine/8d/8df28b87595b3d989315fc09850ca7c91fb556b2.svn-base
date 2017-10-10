@@ -1,0 +1,31 @@
+package xp.us.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import xp.us.mapper.NewsListMapper;
+import xp.us.pojo.NewsList;
+import xp.us.pojo.NewsListExample;
+
+@Service
+public class newSercieImpl implements newService{
+    
+	@Autowired
+	private NewsListMapper newsListMapper;
+	
+	@Override
+	public List<NewsList> getBaseInfo(NewsList newsList) {
+		NewsListExample example=new NewsListExample();
+		List<NewsList> newsLists=newsListMapper.selectByExample(example);
+		return newsLists;
+	}
+
+	@Override
+	public NewsList getMainInfoById(int id) {
+		NewsList newsList=newsListMapper.selectByPrimaryKey(id);
+		return newsList;
+	}
+
+}

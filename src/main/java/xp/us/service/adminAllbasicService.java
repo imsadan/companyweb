@@ -1,0 +1,87 @@
+package xp.us.service;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import xp.us.commons.Mailpojo;
+import xp.us.commons.commonReturn;
+import xp.us.commons.pageHelps;
+import xp.us.pojo.AboutTeam;
+import xp.us.pojo.IndexAdv;
+import xp.us.pojo.IndexCustom;
+import xp.us.pojo.NewsList;
+import xp.us.pojo.UserList;
+import xp.us.pojo.WorkText;
+
+
+public interface adminAllbasicService {
+	//首页轮播
+	public commonReturn addAdvPic(IndexAdv indexAdv);
+	//首页按id更新
+	public IndexAdv findbyId(int id);
+	//保存更新条目
+	public commonReturn updatePic(IndexAdv indexAdv);
+	//首页轮播删除
+	public commonReturn deleteIndexAdv(int id);
+	//首页合作客户
+	public commonReturn addCustom(IndexCustom indexCustom);
+	//按id查找编辑对象
+	public IndexCustom findCustomById(int id);
+	//更新客户信息
+	public commonReturn updateCustom(IndexCustom indexCustom);
+	//删除客户信息
+	public commonReturn deleteCustom(int id);
+	//导航标题删除
+	public commonReturn deleteNav(int workid);
+    //新闻列表
+	public pageHelps getNews(int page, int rows);
+	//添加新闻
+	public commonReturn insertNews(NewsList newsList);
+	//删除新闻
+	public commonReturn deleteNews(int id);
+	//按id查找编辑新闻
+	public NewsList findNewsById(int id);
+	//id查找新闻
+	public NewsList findNewsbyId(int id);
+	//更新新闻
+	public commonReturn updateNews(NewsList newsList);
+	//获取具体的产品信息,根据workid查找对应
+	public List<WorkText> getWorkTexts(int workid);
+	//删除产品信息
+	public commonReturn deleteWorktext(int textid);
+	//按产品id查找对应信息
+	public WorkText findWorkText(int textid); 
+	//更新产品信息
+	public commonReturn updateWorktext(WorkText workText);
+	//添加产品
+	public commonReturn addworktext(WorkText workText, int workid);
+	//登录
+	public commonReturn userLogin(String name,String password,HttpSession httpSession);
+	//管理系统用户
+	public List<UserList> getAllRootUser(UserList userList);
+	//注册管理员
+	public commonReturn saveUser(UserList userList);
+	//检测注册信息
+	public commonReturn checkUser(String content,Integer type);
+	//删除管理员
+	public commonReturn deleteUser(int id);
+	//注销
+	public commonReturn loginOut(HttpSession httpSession);
+	//按id查找要修改的管理员信息
+	public UserList findManagerById(int id);
+	//更新个人管理员信息
+	public commonReturn updateManager(UserList userList,HttpSession httpSession);
+	//获取团队成员信息
+	public List<AboutTeam> getTeams(AboutTeam aboutTeam);
+	//id查找要编辑的成员
+	public AboutTeam findAboutTeamById(int id);
+	//删除成员
+	public commonReturn deleteTeam(int id);
+	//更新成员
+	public commonReturn updateTeam(AboutTeam aboutTeam);
+	//添加新成员
+	public commonReturn addTeam(AboutTeam aboutTeam);
+	//邮件发送
+	public commonReturn sendMail(Mailpojo mailpojo);
+	
+}

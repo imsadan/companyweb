@@ -1,0 +1,250 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑", "Arial Unicode MS";
+    color: #fff;
+    background-color: #fff;
+}
+
+.body {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    color:#000;
+    line-height:2;
+    position: relative;
+    z-index: 1;
+}
+
+/* a {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+} */
+
+/* Header styles
+================================================== */
+
+.navbar {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-family: "微软雅黑", "Arial Unicode MS";
+    background-color: rgba(255,255,255,0.2);
+}
+
+
+.top-menu {
+    margin-top: 30px;
+}
+
+.top-nav-collapse {
+    padding: 0px;
+    background: #fff !important;
+    /* background-color: rgba(255,255,255,0.2); */
+    padding: 4px 0 14px 0 !important;
+    margin: 0px;
+    border:none !important;
+}
+
+.top-nav-collapse .navbar-brand {
+    font-size: 21px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #222;
+}
+
+.navbar-custom a {
+    color: #000;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+    font-size: 14px;
+    font-weight: 700;
+    border-top: 1px solid transparent !important;
+    border-bottom: 1px solid transparent !important;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li.active a {
+    outline: 0;
+    border-top: 1px solid #fff !important;
+    border-bottom: 1px solid #fff !important;
+    background: transparent !important;
+}
+
+.nav > li {
+    padding: 0px 15px;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 0px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 5px !important;
+    padding-bottom: 3px !important;
+}
+
+
+ @media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+} 
+
+.top-nav-collapse .navbar-nav a, .top-nav-collapse .nav a {
+    color: #222 !important;
+}
+
+.top-nav-collapse .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #bbb;
+    top: 11px;
+    margin-bottom: 9px;
+}
+
+.top-nav-collapse .nav li a:hover,
+.top-nav-collapse .nav li a:focus,
+.top-nav-collapse .nav li.active a {
+    border-top: 1px solid #222 !important;
+    border-bottom: 1px solid #222 !important;
+}
+
+/* Intro Top content styles
+================================================== */
+
+.intro {
+    display: table;
+    width: 100%;
+    height: 900px;
+    text-align: center;
+    position: relative;
+    z-index:1;
+	top:140px;
+	
+}
+
+
+
+/* Welcome styles
+================================================== */
+
+.welcome-content {
+    width:100%;
+	height:800px;
+    position: relative;
+    z-index:1;
+	margin-top:160px;
+}
+
+
+
+/* Facts styles
+================================================== */
+
+.facts-content {
+    width:100%;
+	height:1000px;	
+    position: relative;
+    z-index:1;
+	margin-top:30px;
+}
+
+
+
+/* Team Styles
+================================================== */
+
+.team-content {
+	width:100%;
+	height:800px;
+    position: relative;
+    z-index:1;
+}
+
+
+
+/* Services Styles
+================================================== */
+
+.services-content {
+    padding: 130px 0;
+    position: relative;
+    z-index:1;
+	width:100%;
+	height:800px;
+	background-color:#444444;
+}
+
+
+
+
+/* app
+================================================== */
+
+.portfolio-wrap {
+    position: relative;
+    z-index:1;
+	width:100%;
+	height:600px;
+	top:50px;
+}
+
+
+/* Testimonials Styles
+================================================== */
+
+.testimonial-wrap {
+	width:100%;
+	height:1050px;
+    position: relative;  
+	margin-top:100px;
+}
+
+
+/* Contact Styles
+================================================== */
+
+.contact-wrap {
+	width:100%;
+	height:550px;
+    position: relative;
+    z-index:1;
+	margin-top:30px;
+}
+

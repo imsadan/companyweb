@@ -1,0 +1,27 @@
+package xp.us.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import xp.us.service.mapService;
+
+@Controller
+public class mapController {
+    
+	@Autowired
+	private mapService mapService;
+	
+	@RequestMapping("/about")
+	public String map(){
+		return "about";
+	}
+	
+	@RequestMapping(value="/maps",produces = "text/html;charset=UTF-8")
+	@ResponseBody
+	public String returnMapJson(){
+		String result=mapService.getMapInfo();
+		return result;
+	}
+}

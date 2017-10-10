@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xp.us.mapper.ComeStatisticMapper" >
+  <resultMap id="BaseResultMap" type="xp.us.pojo.ComeStatistic" >
+    <result column="comesum" property="comesum" jdbcType="INTEGER" />
+    <result column="comedata" property="comedata" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    comesum, comedata
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="xp.us.pojo.ComeStatisticExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from come_statistic
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="xp.us.pojo.ComeStatisticExample" >
+    delete from come_statistic
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="xp.us.pojo.ComeStatistic" >
+    insert into come_statistic (comesum, comedata)
+    values (#{comesum,jdbcType=INTEGER}, #{comedata,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="xp.us.pojo.ComeStatistic" >
+    insert into come_statistic
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="comesum != null" >
+        comesum,
+      </if>
+      <if test="comedata != null" >
+        comedata,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="comesum != null" >
+        #{comesum,jdbcType=INTEGER},
+      </if>
+      <if test="comedata != null" >
+        #{comedata,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="xp.us.pojo.ComeStatisticExample" resultType="java.lang.Integer" >
+    select count(*) from come_statistic
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update come_statistic
+    <set >
+      <if test="record.comesum != null" >
+        comesum = #{record.comesum,jdbcType=INTEGER},
+      </if>
+      <if test="record.comedata != null" >
+        comedata = #{record.comedata,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update come_statistic
+    set comesum = #{record.comesum,jdbcType=INTEGER},
+      comedata = #{record.comedata,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  
+    <update id="updateByData" parameterType="xp.us.pojo.ComeStatistic" >
+    update come_statistic
+    set comesum = #{comesum,jdbcType=INTEGER}
+      where comedata=#{comedata,jdbcType=VARCHAR}
+  </update>
+</mapper>

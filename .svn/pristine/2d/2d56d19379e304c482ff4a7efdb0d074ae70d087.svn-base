@@ -1,0 +1,20 @@
+package xp.us.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class pageController {
+   
+	@RequestMapping("/")
+	public String indexPage(){
+		return "index";
+	}
+	
+	
+/*	@RequestMapping("/read_list")
+	public String read_list(){
+		return "read_list";
+	}*/
+	
+}
